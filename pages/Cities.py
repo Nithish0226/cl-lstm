@@ -1,4 +1,3 @@
-from tkinter import TRUE
 import streamlit as st
 import pandas as  pd
 import train

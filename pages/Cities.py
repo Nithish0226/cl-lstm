@@ -51,6 +51,7 @@ try:
                 df.to_csv('./cities.csv',index = False)
                 with st.spinner('Model training for '+cityName+' Please Wait...'):
                     train.trainCity(lat1,long1,cityName)
+                st.success(cityName+" added sucessfully !!!")      
             else:
                 st.write("Cordinates already exists")
         else:

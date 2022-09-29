@@ -1,4 +1,5 @@
 # import module
+from tkinter import W
 import streamlit as st
 import time
 import datetime
@@ -12,7 +13,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     )
-city=pd.read_csv('cities.csv')
+city=pd.read_csv('cities_predict.csv')
 f = open("train_time.json")
 fd = json.load(f)
 date=fd["last_train_date"]
@@ -21,8 +22,11 @@ st.write("Model Last Train date: ",date)
 
 
 def model_train():
-    import train
-    train.train()  
+    while True:
+        import train
+        train.train()
+        time.sleep(10)  
+        print("train")
 
 def main():
     try :

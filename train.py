@@ -31,4 +31,3 @@ def train():
         if b["last_train_date"] !=str(a):
             main()
 
-train()

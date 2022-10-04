@@ -1,3 +1,4 @@
 from random import *
 def fn(a):
-    return 100-uniform(2.5, 20)
+    return 100-uniform(9, 23)
+
